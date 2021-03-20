@@ -6,3 +6,7 @@ Exemplo simple de um site usando **ajax** para carregar os dados
   carregar os dados dos estados.
 - Ao ocorrer uma mudança n **select** do estado os dados da cidade são carregados.
 - Adicionar futuramente o crud completo .
+- Save
+- Edit
+- List
+- Delete
