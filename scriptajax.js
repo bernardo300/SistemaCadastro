@@ -11,11 +11,11 @@ $(document).ready(() => {
             option += `<option value =${obj.uf}>${obj.nome}</option>`;
           })
         }
-        $('#cmbEstado').html(option).show();
+        $('#estado').html(option).show();
     }		
   }) 
 
-  $('#cmbEstado').on('change', e => {	
+  $('#estado').on('change', e => {	
     let estado = $(e.target).val()
     $.ajax({
         type: 'POST',
@@ -24,13 +24,13 @@ $(document).ready(() => {
         dataType: 'json',
         success: dados => {
             var option;	
-            option += '<option disabled>'+ 'Selecione a cidade' +'</option>';		
+            option += '<option>'+ 'Selecione a cidade' +'</option>';		
             if (dados.length > 0){
               $.each(dados, function(i, obj){
-                option += `<option value =${obj.uf}>${obj.nome}</option>`;
+                option += `<option value =${obj.nome}>${obj.nome}</option>`;
               })
             }
-            $('#cmbCidade').html(option).show();
+            $('#cidade').html(option).show();
         }		
     }) 
   }) 
